@@ -17,7 +17,8 @@
 FROM maven:3.6.3-openjdk-17-slim as build
 
 WORKDIR /helidon    
-ARG HELIDON_BRANCH=master
+#ARG HELIDON_BRANCH=master
+ARG HELIDON_BRANCH=helidon-3.x
 ARG HELIDON_REPOSITORY=oracle/helidon
 
 ENV HELIDON_BRANCH ${HELIDON_BRANCH}
