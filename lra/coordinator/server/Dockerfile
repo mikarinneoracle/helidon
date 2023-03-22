@@ -44,4 +44,4 @@ COPY --from=build /helidon/lra/coordinator/server/target/libs ./libs
 
 CMD ["java", "-jar", "helidon-lra-coordinator-server.jar"]
 
-EXPOSE 8070
+EXPOSE 8080
