@@ -32,7 +32,7 @@ RUN unzip helidon_repo.zip -d ./helidon_repo
 RUN mv ./helidon_repo/*/* ./
 
 # Build only required modules
-RUN mvn install -pl :helidon-lra-coordinator-server -am -DskipTests
+RUN mvn install -q -pl :helidon-lra-coordinator-server -am -DskipTests
 
 RUN echo "Helidon LRA Coordinator build successfully fished"
 
@@ -41,6 +41,8 @@ WORKDIR /helidon
 
 COPY --from=build /helidon/lra/coordinator/server/target/helidon-lra-coordinator-server.jar ./
 COPY --from=build /helidon/lra/coordinator/server/target/libs ./libs
+
+RUN ls
 
 CMD ["java", "-jar", "helidon-lra-coordinator-server.jar"]
 
