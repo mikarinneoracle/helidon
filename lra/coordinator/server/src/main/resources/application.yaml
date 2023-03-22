@@ -26,7 +26,7 @@ helidon.lra.coordinator:
   db:
     source: "jdbc"
     connection:
-      url: "jdbc:h2:file:./lra-coordinator"
+      url: "jdbc:h2:file:/db/lra-coordinator"
       username: "h2"
       password: ${EMPTY}
       poolName: "h2"
