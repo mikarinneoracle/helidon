@@ -27,7 +27,7 @@ ENV HELIDON_REPOSITORY ${HELIDON_REPOSITORY}
 RUN apt-get -qq update && apt-get -qq -y install wget unzip git
 RUN wget -q -O helidon_repo.zip https://github.com/${HELIDON_REPOSITORY}/archive/refs/heads/${HELIDON_BRANCH}.zip
 
-RUN unzip helidon_repo.zip -d ./helidon_repo
+RUN unzip -q helidon_repo.zip -d ./helidon_repo
     
 RUN mv ./helidon_repo/*/* ./
 
