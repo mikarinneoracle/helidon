@@ -17,7 +17,7 @@
 helidon.lra.coordinator:
   server:
     port: 8070
-    host: "0.0.0.0"
+    host: "lra-coordinator"
 
   context: "/lra-coordinator"
   # Part of LRA id and recovery url
